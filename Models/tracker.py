@@ -51,6 +51,7 @@ class RunningTracker:
 
     def analyze_runs(self):
         """Analyze all runs."""
+<<<<<<< HEAD
         if not self.runs:
             print('No runs available to analyze.')
             return
@@ -70,12 +71,10 @@ class RunningTracker:
         print(f"Longest run = {longest_run_info}")
         print('Average pace by category:')
         for category, avg_pace in self.average_pace_by_category().items():
-        for run in self.runs:
-            print(run.run_info())  # Make sure this method exists in the Run class
-
             print(f"{category}: {avg_pace:.2f} min/km")
 
         
+=======
         for run in self.runs:
             print(run.run_info())  # Make sure this method exists in the Run class
 
