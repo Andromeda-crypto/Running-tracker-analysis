@@ -2,12 +2,19 @@ from Models.run import Run
 from Models.tracker import RunningTracker
 
     
+<<<<<<< HEAD
 run1 = Run("2024-06-02", 11.56, 66, -5, 70)  
 
 if __name__ == "__main__":
     tracker = RunningTracker()
     tracker.add_run(run1)
     tracker.visualize_run_data()
+=======
+run1 = Run("2024-06-02", 11.56, 66, -5)
+if __name__ == "__main__":
+    tracker = RunningTracker()
+    tracker.add_run(run1)
+>>>>>>> origin/main
      
     '''Loading the runs ''' 
     tracker.load_from_csv("runs.csv")
@@ -39,7 +46,10 @@ if __name__ == "__main__":
             print('Invalid choice. Please try again.')
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     
 
 

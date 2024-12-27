@@ -1,7 +1,10 @@
 
 import csv
 from Models.run import Run
+<<<<<<< HEAD
 from visualizer import Visualizer 
+=======
+>>>>>>> origin/main
 
 class RunningTracker:
 
@@ -67,9 +70,16 @@ class RunningTracker:
         print(f"Longest run = {longest_run_info}")
         print('Average pace by category:')
         for category, avg_pace in self.average_pace_by_category().items():
+        for run in self.runs:
+            print(run.run_info())  # Make sure this method exists in the Run class
+
             print(f"{category}: {avg_pace:.2f} min/km")
 
         
+        for run in self.runs:
+            print(run.run_info())  # Make sure this method exists in the Run class
+
+>>>>>>> origin/main
     def save_to_csv(self, filename):
         with open(filename, 'w', newline='') as file:
             writer = csv.writer(file)
@@ -85,6 +95,7 @@ class RunningTracker:
                     self.add_run(Run(row['Date'], float(row['Distance (km)']), float(row['Time (minutes)']), float(row['Temperature (°C)'])))
         except FileNotFoundError:
             print("No existing data found.")
+<<<<<<< HEAD
 
     def total_calories_burned(self):
         """Calculate the total calories burned."""
@@ -124,3 +135,5 @@ class RunningTracker:
 
 
         
+=======
+>>>>>>> origin/main
