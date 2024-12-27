@@ -1,9 +1,10 @@
 class Run:
-    def __init__(self, date, distance_km, time_minutes, temperature_celsius):
+    def __init__(self, date, distance_km, time_minutes, temperature_celsius, weight_kg):
         self.date = date
         self.distance_km = distance_km
         self.time_minutes = time_minutes
         self.temperature_celsius = temperature_celsius
+        self.weight_kg = weight_kg
     
     def pace(self):
         """Calculate the pace per km."""
@@ -22,4 +23,8 @@ class Run:
         """Return formatted information about the run."""
         pace = self.pace()
         conditions = self.conditions()
-        return f"Date: {self.date}, Distance: {self.distance_km} km, Time: {self.time_minutes} minutes, Pace: {pace:.2f} min/km, Conditions: {conditions}"
+        return f"Date: {self.date}, Distance: {self.distance_km} km, Time: {self.time_minutes} minutes, Pace: {pace:.2f} min/km, Conditions: {conditions}, Calories burned: {self.calories_burned()}"
+
+    def calories_burned(self):
+        """Calculate the calories burned during the run."""
+        return 1.036 * self.weight_kg * self.distance_km
