@@ -121,9 +121,8 @@ class RunningTracker:
 
         return avg_paces
     
-    def visualize_run_data(self):
-        visualizer = Visualizer(self.runs)
-        visualizer.plot_run_data()
+    
+        
 
     def visualize_total_distance(self):
         Visualizer.plot_total_distance_by_date(self.runs)

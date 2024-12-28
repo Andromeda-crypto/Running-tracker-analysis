@@ -44,11 +44,10 @@ if __name__ == "__main__":
             break
         elif choice == "4":
             tracker.visualize_avg_pace_by_category()
+        
 
         else:
             print('Invalid choice. Please try again.')
-
-
 
 
 
