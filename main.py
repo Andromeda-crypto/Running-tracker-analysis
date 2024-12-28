@@ -12,6 +12,7 @@ if __name__ == "__main__":
     # Visualize and analyze the runs
     tracker.visualize_run_data()
     tracker.analyze_runs()
+    tracker.visualize_total_distance_by_date()
 
     # Load runs from CSV
     tracker.load_from_csv("runs.csv")
@@ -39,10 +40,15 @@ if __name__ == "__main__":
         elif choice == "3":
             tracker.save_to_csv("runs.csv")
             print('Data Saved.\nGoodbye!')
+
             break
+        elif choice == "4":
+            tracker.visualize_avg_pace_by_category()
 
         else:
             print('Invalid choice. Please try again.')
+
+
 
 
 

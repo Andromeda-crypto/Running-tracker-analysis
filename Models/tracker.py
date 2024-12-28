@@ -2,6 +2,7 @@
 import csv
 from Models.run import Run
 from visualizer import Visualizer 
+from datetime import datetime
 
 class RunningTracker:
 
@@ -123,6 +124,28 @@ class RunningTracker:
     def visualize_run_data(self):
         visualizer = Visualizer(self.runs)
         visualizer.plot_run_data()
+
+    def visualize_total_distance(self):
+        Visualizer.plot_total_distance_by_date(self.runs)
+
+    def visualize_avg_pace_by_category(self):
+
+        avg_pace_by_category = self.avg_pace_by_category()
+        Visualizer.plot_avg_pace_by_category(avg_pace_by_category)
+
+    
+    def validate_date(date_str):
+        try:
+            datetime.strptime(date_str, '%Y-%m-%d')
+            return True
+        except ValueError:
+            return False
+        
+    
+
+    
+
+
 
 
 
