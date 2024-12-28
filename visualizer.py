@@ -1,5 +1,9 @@
 import matplotlib as plt
 
+class Visualizer:
+    def __init__(self):
+        pass
+
 def plot_bar_chart(data, labels,title):
     plt.bar(labels,data)
     plt.title(title)
