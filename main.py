@@ -43,9 +43,23 @@ if __name__ == "__main__":
 
             break
         elif choice == "4":
-            tracker.visualize_avg_pace_by_category()
-        
+            tracker.visualizer.interactive_visualization(tracker.runs)
 
+        elif choice == '5':
+            tracker.visualizer.analyze_trends(tracker.runs)
+            tracker.visualizer.plot_trends(tracker.runs)
+            tracker.visualizer.compare_weather_conditions(tracker.runs)
+
+        elif choice == '6':
+            tracker.visualizer.summary_of_performance(tracker.runs)
+
+        elif choice == '7':
+            tracker.visualizer.analyze_patterns(tracker.runs)
+        elif choice == "8":
+            distance_goal = float(input("Set a distance goal (in km): "))
+            pace_goal = float(input("Set a pace goal (in min/km): "))
+            tracker.goal = RunningGoal(distance_goal, pace_goal)
+            print("Goals set successfully!")
         else:
             print('Invalid choice. Please try again.')
 

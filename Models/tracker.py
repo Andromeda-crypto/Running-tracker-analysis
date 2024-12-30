@@ -1,13 +1,16 @@
 
 import csv
 from Models.run import Run
+from Models.goal import RunningGoal
 from visualizer import Visualizer 
 from datetime import datetime
+
 
 class RunningTracker:
 
     def __init__(self):
         self.runs = []
+        self.goal = None
 
     def add_run(self, run):
         """Add a run to the tracker."""
@@ -121,8 +124,9 @@ class RunningTracker:
 
         return avg_paces
     
-    
-        
+    def visualize_run_data(self):
+        visualizer = Visualizer(self.runs)
+        visualizer.plot_run_data()
 
     def visualize_total_distance(self):
         Visualizer.plot_total_distance_by_date(self.runs)
@@ -141,6 +145,11 @@ class RunningTracker:
             return False
         
     
+        
+        
+
+
+
 
     
 
