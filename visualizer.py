@@ -62,6 +62,18 @@ def plot_avg_pace_by_category(avg_pace_by_category):
     plt.ylabel('Average pace(min/km)')
     plt.show()
 
+def plot_line_chart(x,y,title):
+    plt.plot(x,y,marker='o')
+    plt.title(title)
+    plt.xlabel('Date')
+    plt.ylabel('Distance (Km)')
+    plt.xtics(rotation = 45)
+    plt.show()
+
+
+
+
+
 
 
     
