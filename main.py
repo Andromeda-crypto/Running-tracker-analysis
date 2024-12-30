@@ -1,6 +1,7 @@
 from Models.run import Run
 from Models.tracker import RunningTracker
 from visualizer import Visualizer
+from Models.goal import RunningGoal
 
 if __name__ == "__main__":
     tracker = RunningTracker()
