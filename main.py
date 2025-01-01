@@ -8,7 +8,9 @@ if __name__ == "__main__":
 
     # Example run to test
     run1 = Run("2024-06-02", 11.56, 66, -5, 67)
+    run2 = Run("2024-09-21",11.09,61,21,67)
     tracker.add_run(run1)
+    tracker.add_run(run2)
 
     # Visualize and analyze the runs
     tracker.visualize_run_data()
