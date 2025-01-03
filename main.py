@@ -74,9 +74,9 @@ if __name__ == "__main__":
 
         elif choice == "8":
             # Set distance and pace goals
-            distance_goal = float(input("Set a distance goal (in km): "))
-            pace_goal = float(input("Set a pace goal (in min/km): "))
-
+            distance_goal= float(input('Enter a distance goal (in km) : '))
+            pace_goal = float(input('Enter pace goal (in min/km) : '))
+            
             # Set goals in RunningGoal
             tracker.goal = RunningGoal(distance_goal=distance_goal, time_goal=pace_goal)
 
