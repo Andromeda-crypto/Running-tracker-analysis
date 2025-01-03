@@ -124,6 +124,8 @@ class RunningTracker:
                 groups['Hot'].append(run)
         return groups
     
+    
+    
     def average_pace_by_category(self):
         avg_paces = {}
         grouped_runs = self.group_runs_by_temperature()

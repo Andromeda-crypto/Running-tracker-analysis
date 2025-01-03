@@ -16,7 +16,7 @@ if __name__ == "__main__":
     tracker.visualize_run_data()
     tracker.analyze_runs()
     tracker.visualizer.plot_total_distance_by_date(tracker.runs)
-
+   
     # Load runs from CSV
     tracker.load_from_csv("runs.csv")
 
@@ -84,6 +84,8 @@ if __name__ == "__main__":
 
         else:
             print('Invalid choice. Please try again.')
+
+
 
 
 
